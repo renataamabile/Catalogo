@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+
+    <button id="toggle-theme"style="background-color: #540609; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-family: 'Poiret One', sans-serif;"><img src="img/light_mode.svg"></button>
+
+    <main class="container">
+        <h1>Catálogo de Filmes Favoritos</h1>
+
+        <section class="input-container">
+            <input type="text" id="filme-input" placeholder="Nome do filme">
+            <label for="data-filme">Data de lançamento:</label>
+            <input type="date" id="data-filme" name="data-filme">
+            <input type="text" id="genero-filme" placeholder="Gênero">
+            <label for="arquivo" class="custom-file-upload">
+                Selecionar imagem
+            </label>
+            <input type="file" id="arquivo" accept="image/*">
+
+
+            <button id="add-filme">Adicionar</button>
+        </section>
+        <section class="filters">
+            <button data-filter="all" class="filter active">Todos</button>
+            <button data-filter="completed" class="filter">Assistidos</button>
+            <button data-filter="pending" class="filter">Não assistidos</button>
+        </section>
+
+        <ul id="lista-filmes"></ul>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
